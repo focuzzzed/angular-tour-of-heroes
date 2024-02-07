@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Hero } from '../../shared';
+import { Hero, HEROES } from '../../shared';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
@@ -11,8 +11,10 @@ import { CommonModule } from '@angular/common';
   standalone: true
 })
 export class HeroesComponent {
-  public hero: Hero = {
-    id: 1,
-    name: 'Windstorm'
+  public heroes: Hero[] = HEROES;
+  public selectedHero?: Hero;
+
+  public onSelect(hero: Hero): void {
+    this.selectedHero = hero;
   }
 }
