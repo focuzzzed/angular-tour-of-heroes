@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Hero, HEROES } from '../../shared';
+import { Hero } from '../../shared';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HeroDetailComponent } from '../hero-detail/hero-detail.component';
 import { HeroService } from './hero.service';
-import { Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-heroes',
